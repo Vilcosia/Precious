@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css');
+
+:root {
+  --blue50: #4167bb;
+  --blue100: #2f55a4;
+  --blue150: #2f477a;
+  --gray50: rgb(222, 222, 222);
+  --gray100: rgb(93, 93, 93);
+  --gray150: rgb(56, 56, 56);
+  --bgColor: #f1f2f3;
+  --white: #fff;
+  --padding1: 1.5rem;
+  --transition: all 300ms;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--gray150);
+  background-color: var(--bgColor);
+  font-family: 'Poppins', sans-serif;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* navbar ***************/
+nav {
+  width: 100%;
+  height: 4rem;
+  border-bottom: solid 1px var(--gray50);
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--padding1);
+}
+
+nav .left {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 1rem;
+}
+
+nav .left img {
+  width: 3rem;
+  cursor: pointer;
+}
+
+nav .left .search {
+  display: flex;
+  flex: 1;
+  background-color: var(--gray50);
+  padding: 0.5rem 1rem;
+  gap: 0.5rem;
+  border-radius: 2rem;
+}
+
+nav .left .search input {
+  border: none;
+  background-color: transparent;
+  flex: 1;
+  outline: none;
+}
+
+nav .center {
+  display: flex;
+  flex: 2;
+  justify-content: space-evenly;
+}
+
+nav .center i {
+  font-size: 1.5rem;
+  height: 100%;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+nav .active {
+  color: var(--blue100) !important;
+}
+
+nav .center i:hover {
+  transform: scale(1.2);
+  color: var(--blue100) !important;
+}
+
+nav .center img {
+  width: 2.7rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: solid 2px var(--blue50);
+  cursor: pointer;
+}
+
+nav .right {
+  display: flex;
+  flex: 1;
+  flex-direction: row-reverse;
+}
+
+nav .right i {
+  font-size: 1.5rem;
+  padding: 0.3rem 0.8rem;
+  background-color: var(--gray50);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.main {
+  display: flex;
+  flex: 1;
+  overflow: scroll;
+  padding: 0 var(--padding1);
+  gap: 1rem;
+}
+
+.main .left {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  border-right: solid 1px var(--gray50);
+  padding-right: 1rem;
+}
+.main .center {
+  display: flex;
+  flex: 2;
+}
+.main .right {
+  display: flex;
+  flex: 1;
+}
+
+.section__header {
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section__header .left {
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--gray100);
+}
+
+.section__header .right {
+  border: none;
+  display: flex;
+  flex-direction: row-reverse;
+  color: var(--blue50);
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.section__header .right:hover {
+  letter-spacing: 2px;
+}
+
+.link {
+  margin-top: 1rem;
+}
+
+.link a {
+  display: flex;
+  gap: 1rem;
+  text-decoration: none;
+  color: var(--gray100);
+  font-size: 1.5rem;
+  padding: 1rem .5rem;
+  font-weight: bold;
+  transition: var(--transition);
+  border-radius: 1rem;
+}
+
+.link a:hover {
+  background-color: var(--gray50);
+  color: var(--gray150);
+  letter-spacing: 2px;
+}
